@@ -1,5 +1,6 @@
 name: Test Project
-on: push
+#multiple triggers of the pipeline (by pushing code and by manually activating it)
+on: [push, workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
