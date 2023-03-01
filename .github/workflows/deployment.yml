@@ -18,6 +18,8 @@ jobs:
       - name: Run tests
         run: npm test 
   deploy:
+    #if value in brackets then you can specify multiple dependencies  
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
