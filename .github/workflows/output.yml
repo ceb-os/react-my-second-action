@@ -1,0 +1,12 @@
+#creating file to output metadata
+#research GitHub context for more metadata that can be accessed
+name: Output information
+on: workflow_dispatch
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output GitHub information
+      #github is a reserverd word, to make it readable it is wrapped in toJSON function
+      #this type of syntax is called expression
+        run: echo "${{ toJSON(github) }}"
